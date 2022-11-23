@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<style>
+	li em{font-weight: bold; }
+	body
+	{
+		background-color:lightblue;
+	}
+	.intro
+	{
+		background-color:greenyellow;
+
+	}
+	#Lastname{
+		color:maroon;
+		margin-left: 60px;
+	}
+
+	h1{
+	text-decoration: overline;
+}
+h2
+{
+	text-decoration: underline;
+}
+span
+{
+	color:darkblue ;
+	border: 1px solid black;
+}
+.extra span{
+	color:inherit;
+}
+
+
+	</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+</head>
+<body>
+<br>
+<h4 class="intro">This form is demonstrates the new HTML5 input types and the placeholder, required anf auto focus attributes.</h4> 
+	<div style="color:darkgreen;">
+	Remember to <span>   submit. </span></div>
+<p>J<em> erry wang's homework </em> </p>
+<img src="kris.jpg" width="10%">
+<br>This is Kris Wu, he is in jail.
+<br>
+<h2><p id="Lastname"> What color do you like </p></h2>
+<label>Color:
+<input type="color">
+</label>
+<p></p>
+<label for="birthday"> Date:</label>
+<input type="date" id="date" name="date">
+(yyy-mm-d)
+<p></p>
+<label for="email"> Email:</label>
+<input type="email" name="email" placeholder="name@domain.com" required="">
+(name@domain.com)
+<p></p>
+<label for="Number"> Number:</label>
+<input type="text" id="Number" >
+(Enter a number between 0 and 99)
+<p></p>
+<h1> Do you like me </h1>
+<label for="range">Range:</label>
+<input type="range" id="range" name="range" min="0" max="20">
+<p></p>
+<label for="Search"> Search:</label>
+<input type="search" id="search1" name="search1" placeholder="search query">
+<p></p>
+<label for="time"> Time:</label>
+<input type="time" id="appt" name="appt">
+<p></p>
+<input type="submit" value="Submit">
+<input type="reset" value="Clear">
+
+
+</body></html>
+
