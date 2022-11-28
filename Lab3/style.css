@@ -1,0 +1,122 @@
+h6, em{color: green;}
+	li em{font-weight: bold; }
+	p.double{borfer-style:double;}
+	body
+	{
+		padding: 40px;
+		background-color:coral;
+		font-family: arial, sans-serif;
+		background-color: lightblue;
+		background-attachment: fixed;
+		color: red;
+		background-image:url('curry.jpg');
+		background-position: bottom right;
+		background-repeat: no-repeat;
+	}
+	nav
+	{
+		font-weight :bold;
+		color: steelblue;
+		border: 2px solid inherit;
+		text-align: center;
+		width: 10em;
+		background-color: darkseagreen;
+	}
+	nav ul{
+/*		display: none;*/
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	nav : hover ul{
+		display: block;
+	}
+	nav ul li{
+		border-top: 2px soloid darkseagreen;
+		background-color:  steelblue;
+		width: 15em;
+		color: aqua;
+	}
+	nav ul li:hover
+	{
+		background-color: greenyellow;
+	}
+	a
+		{
+		text-decoration: none;
+	}
+
+	.intro
+	{
+		background-color:greenyellow;
+
+	}
+	#Lastname{
+		color:maroon;
+		margin-left: 60px;
+	}
+	.footer{
+	padding: 40px;
+	text-align: left;
+	background-color: #ddd;
+}
+
+	h1{
+	text-decoration: overline;
+}
+h2
+{
+	text-decoration: underline;
+}
+span
+{
+	color:darkblue ;
+	border: 1px solid black;
+}
+.extra span{
+	color:inherit;
+}
+.super
+{
+	position: :relative;
+	top:-1ex;
+}
+.sub
+{
+	position: :relative;
+	bottom:-1ex;
+}
+.shifter-left
+{
+	position: :relative;
+	left:-1ex;
+}
+.shifter-right
+{
+	position: :relative;
+	right:-1ex;
+}
+.background_image
+{
+	position:absolute ;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+.foreground_image
+{
+	position:absolute ;
+	top: 25px;
+	left: 100px;
+	z-index: 2;
+}
+.text{
+	position:absolute;
+	top:25px;
+	left: 100px;
+	z-index: 3;
+	font size:20pt;
+	font-family :tahoma,gevana, sans-serif;
+}
+
+
