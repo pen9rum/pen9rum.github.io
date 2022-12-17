@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+
+	<script>
+		var a=parseInt(window.prompt("Input variable one"));
+		
+		
+		var b=parseInt(window.prompt("Input variable two"));
+		
+		if(a>b)
+		{
+			document.body.style.backgroundColor="lightblue";
+			document.writeln(a + ">" +b);
+		}
+		else if(a<b)
+		{
+			document.body.style.backgroundColor="lightgreen";
+			document.writeln(a + "<"+b);
+		}
+		else
+		{
+			document.body.style.backgroundColor="lightyellow";
+			document.writeln(a + "=="+b);
+		}
+	</script>
+<input type="button" value="first number" onClick="alert(a)">
+<input type="button" value="second number" onClick="alert(b)">
+</body>
+</html>
