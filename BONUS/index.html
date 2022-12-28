@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title></title>
+</head>
+<body>
+ <script type = "text/javascript">
+    var text;
+    var char;
+
+    text = String(window.prompt("input data"));
+    char = String(window.prompt("input a char to search"));
+    var num = text.length;
+    for(var i = 0; i<num; i++){
+   if(char == (text[i])){
+       document.writeln(i);
+       document.writeln("<br>");
+      }
+    }
+ </script>
+</body>
+</html>
