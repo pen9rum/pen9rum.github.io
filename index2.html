@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <style>
+    /* 基本樣式 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .portfolio {
+      padding: 20px;
+    }
+
+    .filter-list, .select-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .filter-item, .select-item {
+      margin: 5px 0;
+    }
+
+    /* 修改按鈕的預設樣式 */
+    .filter-item button, .select-item button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #FFD700; /* 黃色背景 */
+      color: #000; /* 黑色文字 */
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s; /* 添加文字顏色過渡 */
+    }
+
+    /* 修改按鈕的懸停和活動狀態樣式 */
+    .filter-item button.active, .filter-item button:hover, .select-item button:hover {
+      background-color: #000; /* 黑色背景 */
+      color: #FFD700; /* 黃色文字 */
+    }
+
+    .filter-select-box {
+      position: relative;
+      display: none; /* 隱藏，後續可根據響應式需求顯示 */
+    }
+
+    .filter-select {
+      padding: 10px 20px;
+      border: none;
+      background-color: #b73d3d;
+      cursor: pointer;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .select-list {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #601313;
+      border: 1px solid #7d1818;
+      border-radius: 5px;
+      max-height: 200px;
+      overflow-y: auto;
+      display: none;
+      z-index: 1000;
+    }
+
+    .select-list.show {
+      display: block;
+    }
+
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .project-item {
+      border: 1px solid #870a0a;
+      border-radius: 5px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .project-item:hover {
+      transform: scale(1.05);
+    }
+
+    .project-img {
+      position: relative;
+    }
+
+    .project-item-icon-box {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(164, 41, 41, 0.6);
+      color: #cf1a1a;
+      padding: 5px;
+      border-radius: 50%;
+    }
+
+    .project-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .project-title {
+      padding: 10px;
+      font-size: 1.2em;
+      margin: 0;
+    }
+
+    .project-category {
+      padding: 0 10px 10px;
+      color: #eb3333;
+      margin: 0;
+    }
+
+    /* Modal 樣式 */
+    .modal {
+      display: none; /* 隱藏 */
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+      position: relative;
+    }
+
+    .modal-content h3 {
+      margin-top: 0;
+    }
+
+    .modal-buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .modal-buttons button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .confirm-btn {
+      background-color: #28a745;
+      color: #fff;
+    }
+
+    .cancel-btn {
+      background-color: #dc3545;
+      color: #fff;
+    }
+
+    /* 響應式設計 */
+    @media (max-width: 768px) {
+      .filter-list {
+        display: none;
+      }
+      .filter-select-box {
+        display: block;
+      }
+      .project-list {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PORTFOLIO -->
+  <article class="portfolio" data-page="portfolio">
+
+    <header>
+      <h2 class="h2 article-title">Portfolio</h2>
+    </header>
+
+    <section class="projects">
+
+      <!-- Filter List -->
+      <ul class="filter-list">
+
+        <li class="filter-item">
+          <button class="active" data-filter-btn data-filter="all">ALL</button>
+        </li>
+
+        <li class="filter-item">
+          <button data-filter-btn data-filter="cv">CV</button>
+        </li>
+
+        <li class="filter-item">
+          <button data-filter-btn data-filter="hackathon">Hackathon</button>
+        </li>
+
+        <li class="filter-item">
+          <button data-filter-btn data-filter="tech projects">Tech Projects</button>
+        </li>
+
+        <li class="filter-item">
+          <button data-filter-btn data-filter="other projects">Other Projects</button>
+        </li>
+
+        <li class="filter-item">
+          <button data-filter-btn data-filter="papers">Papers</button>
+        </li>
+
+      </ul>
+
+      <!-- Filter Select Box for Mobile/Additional Filtering -->
+      <div class="filter-select-box">
+
+        <button class="filter-select" data-select>
+
+          <div class="select-value" data-select-value>Select category</div>
+
+          <div class="select-icon">
+            <ion-icon name="chevron-down"></ion-icon>
+          </div>
+
+        </button>
+
+        <ul class="select-list">
+
+          <li class="select-item">
+            <button data-select-item data-filter="all">ALL</button>
+          </li>
+
+          <li class="select-item">
+            <button data-select-item data-filter="cv">CV</button>
+          </li>
+
+          <li class="select-item">
+            <button data-select-item data-filter="hackathon">Hackathon</button>
+          </li>
+
+          <li class="select-item">
+            <button data-select-item data-filter="tech projects">Tech Projects</button>
+          </li>
+
+          <li class="select-item">
+            <button data-select-item data-filter="other projects">Other Projects</button>
+          </li>
+
+          <li class="select-item">
+            <button data-select-item data-filter="papers">Papers</button>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <!-- Project List -->
+      <ul class="project-list">
+
+        <!-- CV Project -->
+        <li class="project-item" data-filter-item data-category="cv">
+          <a href="#" data-project-link="https://example.com/cv" data-description="這是 Jerry Wang 的詳細履歷。">
+            <figure class="project-img">
+              <div class="project-item-icon-box">
+                <ion-icon name="eye-outline"></ion-icon>
+              </div>
+              <img src="./assets/images/portfolio_cv.jpg" alt="Jerry Wang's CV" loading="lazy">
+            </figure>
+            <h3 class="project-title">Jerry Wang's CV</h3>
+            <p class="project-category">CV</p>
+          </a>
+        </li>
+
+        <!-- Hackathon Projects -->
+        <li class="project-item" data-filter-item data-category="hackathon">
+          <a href="#" data-project-link="https://example.com/hackathon2022" data-description="Meichu Hackathon 2022 的量化交易策略專案。">
+            <figure class="project-img">
+              <div class="project-item-icon-box">
+                <ion-icon name="eye-outline"></ion-icon>
+              </div>
+              <img src="./assets/images/project-1.jpg" alt="Meichu Hackathon 2022, Quant Trading Strategy" loading="lazy">
+            </figure>
+            <h3 class="project-title">Meichu Hackathon 2022</h3>
+            <p class="project-category">Quant Trading Strategy</p>
+          </a>
+        </li>
+
+        <li class="project-item" data-filter-item data-category="hackathon">
+          <a href="#" data-project-link="https://example.com/hackathon2023" data-description="Meichu Hackathon 2023 的記憶提醒專案。">
+            <figure class="project-img">
+              <div class="project-item-icon-box">
+                <ion-icon name="eye-outline"></ion-icon>
+              </div>
+              <img src="./assets/images/project-2.png" alt="Meichu Hackathon 2023, Memory Reminder" loading="lazy">
+            </figure>
+            <h3 class="project-title">Meichu Hackathon 2023</h3>
+            <p class="project-category">Memory Reminder</p>
+          </a>
+        </li>
+
+        <li class="project-item" data-filter-item data-category="hackathon">
+          <a href="#" data-project-link="https://example.com/hackathon2024" data-description="Meichu Hackathon 2024 的綠色建築專案。">
+            <figure class="project-img">
+              <div class="project-item-icon-box">
+                <ion-icon name="eye-outline"></ion-icon>
+              </div>
+              <img src="./assets/images/project-3.jpg" alt="Meichu Hackathon 2024, Green Builder" loading="lazy">
+            </figure>
+            <h3 class="project-title">Meichu Hackathon 2024</h3>
+            <p class="project-category">Green Builder</p>
+          </a>
+        </li>
+
+        <li class="project-item" data-filter-item data-category="hackathon">
+          <a href="#" data-project-link="https://example.com/presidential2024" data-description="Presidential Hackathon 2024 的電動自動巴士專案。">
+            <figure class="project-img">
+              <div class="project-item-icon-box">
+                <ion-icon name="eye-outline"></ion-icon>
+              </div>
+              <img src="./assets/images/project-4.png" alt="Presidential Hackathon 2024, Electric Autuary Bus" loading="lazy">
+            </figure>
+            <h3 class="project-title">Presidential Hackathon 2024</h3>
+            <p class="project-category">Electric Autuary Bus</p>
+          </a>
+        </li>
+
+        <li class="project-item" data-filter-item data-category="hackathon">
+          <a href="#" data-project-link="https://example.com/ai2024" data-description="Generative AI Hackathon 2024 的能源管理專案。">
+            <figure class="project-img">
+              <div class="project-item-icon-box">
+                <ion-icon name="eye-outline"></ion-icon>
+              </div>
+              <img src="./assets/images/project-5.png" alt="Generative AI Hackathon 2024, Energy Manager" loading="lazy">
+            </figure>
+            <h3 class="project-title">Generative AI Hackathon 2024</h3>
+            <p class="project-category">Energy Manager</p>
+          </a>
+        </li>
+
+        <!-- Tech Projects -->
+        <li class="project-item" data-filter-item data-category="tech projects">
+          <a href="#" data-project-link="https://example.com/teddyjudge" data-description="Teddy Judge 是一個技術專案，用於...">
+            <figure class="project-img">
+              <div class="project-item-icon-box">
+                <ion-icon name="eye-outline"></ion-icon>
+              </div>
+              <img src="./assets/images/project-6.png" alt="Teddy Judge" loading="lazy">
+            </figure>
+            <h3 class="project-title">Teddy Judge</h3>
+            <p class="project-category">Tech Project</p>
+          </a>
+        </li>
+
+        <li class="project-item" data-filter-item data-category="tech projects">
+          <a href="#" data-project-link="https://example.com/tetris" data-description="Tetris 是一個經典的益智遊戲重製版。">
+            <figure class="project-img">
+              <div class="project-item-icon-box">
+                <ion-icon name="eye-outline"></ion-icon>
+              </div>
+              <img src="./assets/images/project-7.png" alt="Tetris" loading="lazy">
+            </figure>
+            <h3 class="project-title">Tetris</h3>
+            <p class="project-category">Tech Project</p>
+          </a>
+        </li>
+
+        <!-- Other Projects -->
+        <li class="project-item" data-filter-item data-category="other projects">
+          <a href="#" data-project-link="https://example.com/esg2024" data-description="ESG Business Competition 的專案內容。">
+            <figure class="project-img">
+              <div class="project-item-icon-box">
+                <ion-icon name="eye-outline"></ion-icon>
+              </div>
+              <img src="./assets/images/project-8.jpg" alt="ESG Business Competition" loading="lazy">
+            </figure>
+            <h3 class="project-title">ESG Business Competition</h3>
+            <p class="project-category">Other Project</p>
+          </a>
+        </li>
+
+        <li class="project-item" data-filter-item data-category="other projects">
+          <a href="#" data-project-link="https://example.com/atcc2024" data-description="ATCC Business Competition 的專案內容。">
+            <figure class="project-img">
+              <div class="project-item-icon-box">
+                <ion-icon name="eye-outline"></ion-icon>
+              </div>
+              <img src="./assets/images/project-9.png" alt="ATCC Business Competition" loading="lazy">
+            </figure>
+            <h3 class="project-title">ATCC Business Competition</h3>
+            <p class="project-category">Other Project</p>
+          </a>
+        </li>
+
+        <!-- Papers -->
+        <li class="project-item" data-filter-item data-category="papers">
+          <a href="#" data-project-link="https://example.com/socialtemperature" data-description="社會溫度：即時社會活動監控，ICS 2024 的論文。">
+            <figure class="project-img">
+              <div class="project-item-icon-box">
+                <ion-icon name="eye-outline"></ion-icon>
+              </div>
+              <img src="./assets/images/project-papers.jpg" alt="Social Temperature: Real-Time Social Activity Monitoring, ICS 2024" loading="lazy">
+            </figure>
+            <h3 class="project-title">Social Temperature</h3>
+            <p class="project-category">Papers</p>
+          </a>
+        </li>
+
+      </ul>
+
+    </section>
+
+  </article>
+
+  <!-- Modal -->
+  <div class="modal" id="project-modal">
+    <div class="modal-content">
+      <h3 id="modal-title">項目名稱</h3>
+      <p id="modal-description">這是項目的描述。</p>
+      <div class="modal-buttons">
+        <button class="confirm-btn" id="confirm-btn">確認前往</button>
+        <button class="cancel-btn" id="cancel-btn">返回</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterButtons = document.querySelectorAll('[data-filter-btn]');
+      const selectBox = document.querySelector('[data-select]');
+      const selectList = document.querySelector('.select-list');
+      const selectItems = document.querySelectorAll('[data-select-item]');
+      const projectItems = document.querySelectorAll('[data-filter-item]');
+      const modal = document.getElementById('project-modal');
+      const modalTitle = document.getElementById('modal-title');
+      const modalDescription = document.getElementById('modal-description');
+      const confirmBtn = document.getElementById('confirm-btn');
+      const cancelBtn = document.getElementById('cancel-btn');
+      let currentLink = '#';
+
+      // 篩選功能
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // 移除所有按鈕的 active 狀態
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // 添加當前按鈕的 active 狀態
+          button.classList.add('active');
+
+          const filter = button.getAttribute('data-filter');
+
+          projectItems.forEach(item => {
+            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // 下拉選單功能
+      selectBox.addEventListener('click', () => {
+        selectList.classList.toggle('show');
+      });
+
+      selectItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const filter = item.getAttribute('data-filter');
+          const filterText = item.textContent;
+
+          // 更新選擇的值
+          document.querySelector('[data-select-value]').textContent = filterText;
+
+          // 移除所有按鈕的 active 狀態
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // 添加當前選擇的按鈕的 active 狀態
+          filterButtons.forEach(btn => {
+            if (btn.getAttribute('data-filter') === filter) {
+              btn.classList.add('active');
+            }
+          });
+
+          // 篩選項目
+          projectItems.forEach(item => {
+            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+
+          // 關閉下拉選單
+          selectList.classList.remove('show');
+        });
+      });
+
+      // 點擊專案項目顯示模態框
+      projectItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+          const linkElement = item.querySelector('[data-project-link]');
+          const title = item.querySelector('.project-title').textContent;
+          const description = linkElement.getAttribute('data-description') || item.querySelector('.project-category').textContent;
+          const link = linkElement.getAttribute('data-project-link') || linkElement.getAttribute('href');
+
+          modalTitle.textContent = title;
+          modalDescription.textContent = description;
+          currentLink = link;
+
+          modal.style.display = 'flex';
+        });
+      });
+
+      // 確認前往
+      confirmBtn.addEventListener('click', () => {
+        if (currentLink && currentLink !== '#') {
+          window.location.href = currentLink;
+        }
+        modal.style.display = 'none';
+      });
+
+      // 取消返回
+      cancelBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+      });
+
+      // 點擊模態框外部關閉
+      window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
