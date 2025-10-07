@@ -15,8 +15,8 @@ export const resumeData = {
     socialLinks: [
       { platform: "linkedin", url: "https://linkedin.com/in/teddyagee", icon: "fab fa-linkedin-in" },
       { platform: "github", url: "https://github.com/pen9rum", icon: "fab fa-github" },
-      { platform: "google", url: "https://scholar.google.com/citations?user=NzBilksAAAAJ&hl=zh-TW", icon: "fab fa-google" },
-      { platform: "cv", url: "https://pen9rum-github-io.vercel.app", icon: "fas fa-file-pdf" }
+      { platform: "google", url: "https://scholar.google.com/citations?user=NzBilksAAAAJ&hl=zh-TW", icon: "fab fa-google-scholar" },
+      { platform: "cv", url: "https://pen9rum-github-io.vercel.app", icon: "fas fa-id-card" }
     ]
   },
 
