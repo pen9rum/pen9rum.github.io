@@ -11,11 +11,12 @@ export const resumeData = {
     phone: "",
     email: "111306078@g.nccu.edu.tw",
     description: "AI Researcher specializing in Deep Learning, Information Retrieval, Adversarial Machine Learning, and Trustworthy AI. Currently conducting research in Graph RAG systems and developing novel approaches for Theory of Mind in Large Language Models.",
-    profileImage: "https://static0.srcdn.com/wordpress/wp-content/uploads/2025/01/ted-eating-bread-while-wearing-a-suit-in-ted-season-1.jpg?w=1200&h=675&fit=crop",
+    profileImage: "assets/img/ted_cover.jpg",
     socialLinks: [
       { platform: "linkedin", url: "https://linkedin.com/in/teddyagee", icon: "fab fa-linkedin-in" },
       { platform: "github", url: "https://github.com/pen9rum", icon: "fab fa-github" },
-      { platform: "website", url: "https://pen9rum-github-io.vercel.app", icon: "fas fa-globe" }
+      { platform: "google", url: "https://scholar.google.com/citations?user=NzBilksAAAAJ&hl=zh-TW", icon: "fab fa-google" },
+      { platform: "cv", url: "https://pen9rum-github-io.vercel.app", icon: "fas fa-file-pdf" }
     ]
   },
 
@@ -36,48 +37,55 @@ export const resumeData = {
   ],
 
   // 工作與研究經驗
-  experience: [
-    {
-      title: "QA Engineer (Accelerator Program)",
-      company: "Binance - AI and Data Service Team",
-      period: "Sep. 2025 – Present",
-      description: "Evaluating risk check agent for AI safety, created over 1,000 test cases and auto pipeline on AWS SageMaker. Designed red teaming single-turn and multi-turn prompts to attack internal bot for bot robustness."
-    },
+  experience: [   
     {
       title: "Research Assistant",
       company: "Graph Lab, Stony Brook University",
       period: "Aug. 2025 – Present",
-      description: "Advisor: Prof. Tengfei Ma. Developing CocoRAG — Dynamic Graph RAG system enhanced with improved Chain-of-Thought prompting (Coconut) for more robust reasoning. Targeted to evaluate on Knowledge Graph QA tasks."
+      description: "Advisor: Prof. Tengfei Ma. Developing CocoRAG — Dynamic Graph RAG system enhanced with improved Chain-of-Thought prompting (Coconut) for more robust reasoning. Targeted to evaluate on Knowledge Graph QA tasks.",
+      image: "/assets/img/kdd_2025.jpg",
     },
     {
       title: "Research Assistant",
       company: "Reinforcement Gaming Lab, Academia Sinica",
       period: "July 2025 – Present",
-      description: "Advisor: Prof. Ti-Rong Wu. Developing a stochastic MCTS-based Go Variant using Deep Reinforcement Learning. Modified traditional MCTS tree architecture to accommodate multi-turn gaming environments under AlphaZero Structure."
+      description: "Advisor: Prof. Ti-Rong Wu. Developing a stochastic MCTS-based Go Variant using Deep Reinforcement Learning. Modified traditional MCTS tree architecture to accommodate multi-turn gaming environments under AlphaZero Structure.",
+      image: "/assets/img/kdd_2025.jpg",
     },
     {
       title: "Research Assistant",
       company: "Software Security Lab, NCCU",
       period: "July 2024 – Present",
-      description: "Advisor: Prof. Fang Yu. Developed DeRAG, a novel black-box attack leveraging Differential Evolution for adversarial prompt optimization in RAG systems. Achieved state-of-the-art attack success (100%@Top-10 on MS MARCO, >70%@Top-20 on SciFact)."
-    },
-    {
-      title: "Testing Engineer Intern",
-      company: "Carousell",
-      period: "Feb. 2025 – Jun. 2025",
-      description: "Implemented automation testing using Golang and Jenkins to enhance testing efficiency by 12%. Optimized Trinity for iOS and Android, streamlining version control and deployment using Gemini and Copilot."
+      description: "Advisor: Prof. Fang Yu. Developed DeRAG, a novel black-box attack leveraging Differential Evolution for adversarial prompt optimization in RAG systems. Achieved state-of-the-art attack success (100%@Top-10 on MS MARCO, >70%@Top-20 on SciFact).",
+      image: "/assets/img/kdd_2025.jpg",
     },
     {
       title: "Research Assistant",
       company: "Future Media Lab, NCCU",
       period: "Jan. 2024 – Sep. 2025",
-      description: "Advisor: Prof. Chen, Lyn Chao-ling. Developed real-time social activity monitoring system using deep learning multi-modal models including sound and emotion recognition with YOLO and DeepFace. Created BEARing framework improving NBA player performance prediction accuracy by over 10%."
+      description: "Advisor: Prof. Chen, Lyn Chao-ling. Developed real-time social activity monitoring system using deep learning multi-modal models including sound and emotion recognition with YOLO and DeepFace. Created BEARing framework improving NBA player performance prediction accuracy by over 10%.",
+      image: "/assets/img/kdd_2025.jpg",
+    },
+    {
+      title: "QA Engineer (Accelerator Program)",
+      company: "Binance - AI and Data Service Team",
+      period: "Sep. 2025 – Present",
+      description: "Evaluating risk check agent for AI safety, created over 1,000 test cases and auto pipeline on AWS SageMaker. Designed red teaming single-turn and multi-turn prompts to attack internal bot for bot robustness.",
+      image: "/assets/img/kdd_2025.jpg",
+    },
+    {
+      title: "Testing Engineer Intern",
+      company: "Carousell",
+      period: "Feb. 2025 – Jun. 2025",
+      description: "Implemented automation testing using Golang and Jenkins to enhance testing efficiency by 12%. Optimized Trinity for iOS and Android, streamlining version control and deployment using Gemini and Copilot.",
+      image: "/assets/img/kdd_2025.jpg",
     },
     {
       title: "Software Engineer Intern",
       company: "Delta Electronics",
       period: "Jan. 2024 – Feb. 2024",
-      description: "Built Python-based automation system for car motoring pipeline data evaluation and report generation, enhancing efficiency by 15% across the entire workflow with C language for experiment mocking."
+      description: "Built Python-based automation system for car motoring pipeline data evaluation and report generation, enhancing efficiency by 15% across the entire workflow with C language for experiment mocking.",
+      image: "/assets/img/kdd_2025.jpg",
     }
   ],
 
@@ -88,7 +96,8 @@ export const resumeData = {
       degree: "Bachelor of Commerce in Management Information Systems",
       field: "Double Major in Bachelor of Science in Artificial Intelligence Applications",
       period: "Sept. 2022 – Present",
-      gpa: "3.92/4.0 (CS courses GPA: 4.0)"
+      gpa: "3.92/4.0 (CS courses GPA: 4.0)",
+      image: "https://upload.wikimedia.org/wikipedia/zh/thumb/3/33/National_Chengchi_University_logo.svg/1200px-National_Chengchi_University_logo.svg.png"
     }
   ],
 
@@ -208,7 +217,6 @@ export const resumeData = {
     { name: "About", href: "#about" },
     { name: "Experience", href: "#experience" },
     { name: "Education", href: "#education" },
-    { name: "Skills", href: "#skills" },
     { name: "Publications", href: "#publications" },
     { name: "Awards", href: "#awards" },
     { name: "Leadership", href: "#leadership" },

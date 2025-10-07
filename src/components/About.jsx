@@ -15,7 +15,6 @@ const About = ({ personal, news }) => {
           <a href={`mailto:${personal.email}`}>{personal.email}</a>
         </div>
         <p className="lead mb-5">{personal.description}</p>
-        
         {/* News Section */}
         {news && news.length > 0 && (
           <div className="mb-5">

@@ -10975,5 +10975,5 @@ section.resume-section .resume-section-content {
   width: 10rem !important;  
   height: 10rem !important;  
   object-fit: cover !important;  
-  object-position: center !important;  
+  object-position: center 10% !important;  
 } 

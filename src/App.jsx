@@ -106,9 +106,6 @@ const App = () => {
         <Education education={resumeData.education} />
         <hr className="m-0" />
         
-        <Skills skills={resumeData.skills} />
-        <hr className="m-0" />
-        
         <Publications publications={resumeData.publications} />
         <hr className="m-0" />
         
