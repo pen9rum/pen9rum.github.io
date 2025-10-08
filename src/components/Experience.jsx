@@ -23,14 +23,14 @@ const Experience = ({ experience }) => {
           <ExperienceCard experience={experience[0]} />
           <ExperienceCard experience={experience[1]} />
           <ExperienceCard experience={experience[2]} />
-          <ExperienceCard experience={experience[5]} />
+          <ExperienceCard experience={experience[3]} />
         </div>
         
         {/* Internship Section */}
         <h3 style={sectionHeaderStyle}>Job Experience</h3>
         <div className="experience-list">
-          <ExperienceCard experience={experience[3]} />
           <ExperienceCard experience={experience[4]} />
+          <ExperienceCard experience={experience[5]} />
           <ExperienceCard experience={experience[6]} />
         </div>
       </div>

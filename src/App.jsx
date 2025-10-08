@@ -114,8 +114,7 @@ const App = () => {
         
         <Leadership leadership={resumeData.leadership} />
         <hr className="m-0" />
-        
-        <Interests interests={resumeData.interests} />
+
       </div>
     </div>
   );

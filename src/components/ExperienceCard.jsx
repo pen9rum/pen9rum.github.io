@@ -40,8 +40,8 @@ const ExperienceCard = ({ experience }) => {
   };
 
   return (
-    <div 
-      className="experience-card mb-4" 
+    <div
+      className="experience-card mb-4"
       style={cardStyle}
       onMouseEnter={(e) => {
         e.currentTarget.style.boxShadow = '0 0.5rem 1rem rgba(0, 0, 0, 0.15)';
@@ -57,8 +57,8 @@ const ExperienceCard = ({ experience }) => {
         {experience.image && (
           <div className="col-md-3 col-sm-4">
             <div className="experience-image">
-              <img 
-                src={experience.image} 
+              <img
+                src={experience.image}
                 alt={experience.company}
                 className="img-fluid rounded shadow-sm"
                 style={imageStyle}
@@ -66,7 +66,7 @@ const ExperienceCard = ({ experience }) => {
             </div>
           </div>
         )}
-        
+
         {/* 右側內容 */}
         <div className={experience.image ? "col-md-9 col-sm-8" : "col-12"}>
           <div className="experience-content">
@@ -74,21 +74,23 @@ const ExperienceCard = ({ experience }) => {
             <h5 className="experience-title mb-2" style={titleStyle}>
               {experience.title}
             </h5>
-            
+
             {/* 公司名稱 */}
             <p className="experience-company mb-1" style={companyStyle}>
               {experience.company}
             </p>
-            
+
             {/* 工作期間 */}
             <p className="experience-period mb-2" style={periodStyle}>
               {experience.period}
             </p>
-            
-            {/* 工作描述 */}
-            <p className="experience-description mb-2" style={descriptionStyle}>
-              {experience.description}
-            </p>            
+
+            {/* 工作描述 —— 讓 <br> / <a> 等 HTML 生效 */}
+            <p
+              className="experience-description mb-2"
+              style={descriptionStyle}
+              dangerouslySetInnerHTML={{ __html: experience.description }}
+            />
           </div>
         </div>
       </div>

@@ -18,7 +18,7 @@ const Awards = ({ awards }) => {
   };
 
   // 分類獎項
-  const academicAwards = [
+  const academicAwards  = [
     awards[0], // Deliman AI Scholarship
     awards[1], // College Student Research Grant
     awards[7]  // Reviewer – Efficient Reasoning Workshop
@@ -38,7 +38,7 @@ const Awards = ({ awards }) => {
         <h2 className="mb-5">Awards & Certifications</h2>
         
         {/* Academic Awards Section */}
-        <h3 style={sectionHeaderStyle}>Academic Awards</h3>
+        <h3 style={sectionHeaderStyle}>Academic Awards and Services</h3>
         <ul className="fa-ul mb-0" style={{ lineHeight: '2.2' }}>
           {academicAwards.map((award, index) => (
             <li key={`academic-${index}`} className="mb-3">
