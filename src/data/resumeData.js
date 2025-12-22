@@ -10,10 +10,7 @@ export const resumeData = {
     address: "Taipei, Taiwan",
     phone: "",
     email: "111306078@g.nccu.edu.tw",
-    description: `I am an upcoming M.S./Ph.D. student in Computer Science (Artificial Intelligence) at 2026 Fall.  
-    I recently graduated from National Chengchi University with a double major in Information Management and Artificial Intelligence Applications,  
-    where I conducted research under the guidance of  <a href="https://homepage.iis.sinica.edu.tw/pages/tirongwu/index_zh.html" target="_blank" rel="noopener noreferrer">Prof. Ti-rong Wu</a> (Academia Sinica),  <a href="https://mis2.nccu.edu.tw/zh_tw/Faculty/Faculty_01/FANG-YU-33653605" target="_blank" rel="noopener noreferrer">Prof. Fang Yu</a> (NCCU),  and <a href="https://www.futuremedialab.tw/contact" target="_blank" rel="noopener noreferrer">Prof. Lyn Chao-ling Chen</a> (Interdisciplinary AI Center / Future Media Lab, NCCU).  My research interests span Deep Learning, Information Retrieval, Adversarial Machine Learning, Trustworthy AI, Theory of Mind in AI,  Deep Reinforcement Learning, and Reasoning in Large Language Models and Structured Knowledge. If you are interested in collabating or searching for Ph.D. students, please feel free to reach out!`,
-
+description: `I am an upcoming M.S./Ph.D. student in Computer Science (Artificial Intelligence) at 2026 Fall. I recently graduated from National Chengchi University with a double major in Information Management and Artificial Intelligence Applications, where I conducted research under the guidance of <a href="https://homepage.iis.sinica.edu.tw/pages/tirongwu/index_zh.html" target="_blank" rel="noopener noreferrer">Prof. Ti-rong Wu</a> (Academia Sinica), <a href="https://mis2.nccu.edu.tw/zh_tw/Faculty/Faculty_01/FANG-YU-33653605" target="_blank" rel="noopener noreferrer">Prof. Fang Yu</a> (NCCU), <a href="https://www.futuremedialab.tw/contact" target="_blank" rel="noopener noreferrer">Prof. Lyn Chao-ling Chen</a> (NCCU), and <a href="https://sites.google.com/site/matf0123/home" target="_blank" rel="noopener noreferrer">Prof. Tengfei Ma</a> (SBU). My research interests span AI agents, Information Retrieval, Adversarial Machine Learning, Trustworthy AI, Theory of Mind in AI, Deep Reinforcement Learning, and Reasoning in Large Language Models and Structured Knowledge. If you are interested in collaborating, please feel free to reach out!`,
     profileImage: "assets/img/ted_cover.jpg",
     socialLinks: [
       { platform: "linkedin", url: "https://linkedin.com/in/teddyagee", icon: "fab fa-linkedin-in" },
@@ -26,6 +23,12 @@ export const resumeData = {
 
   // 最新消息
   news: [
+    {
+      date: "Oct. 2025",
+content: `Awarded the <a href="http://www.ta-yung.com.tw/" target="_blank" rel="noopener noreferrer">
+<strong>National Lin Hsiung Chen Foundation Scholarship</strong>
+</a> (for the top 1 AI student).`
+    },
     {
       date: "Oct. 2025",
       content: `Our paper <strong>Aging Decline in Basketball Career Trend Prediction Based on Machine Learning and LSTM Model</strong> 
