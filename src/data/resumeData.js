@@ -27,7 +27,7 @@ description: `I am an upcoming M.S./Ph.D. student in Computer Science (Artificia
       date: "Oct. 2025",
 content: `Awarded the <a href="http://www.ta-yung.com.tw/" target="_blank" rel="noopener noreferrer">
 <strong>National Lin Hsiung Chen Foundation Scholarship</strong>
-</a> (for the top 1 AI student).`
+</a> (for the top 1 AI and MIS student).`
     },
     {
       date: "Oct. 2025",
