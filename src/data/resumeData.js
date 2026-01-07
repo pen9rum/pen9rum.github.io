@@ -192,6 +192,8 @@ Developed <strong>DeRAG</strong>, a novel black-box attack leveraging Differenti
       image: "/assets/img/kdd_2025.jpg",
       links: {
         pdf: "https://arxiv.org/abs/2507.15042",
+        promptfoo: "https://www.promptfoo.dev/lm-security-db/vuln/black-box-rag-rank-hijack-e0bc28ed",
+        code: "https://github.com/pen9rum/Rag_attack_DeRag",
       }
     },
     {
@@ -211,7 +213,7 @@ Developed <strong>DeRAG</strong>, a novel black-box attack leveraging Differenti
       status: "Accepted",
       image: "/assets/img/Neurips2025.jpg",
       links: {
-        pdf: "COMING SOON",
+        pdf: "https://arxiv.org/abs/2512.19210",
       }
     },
     {
