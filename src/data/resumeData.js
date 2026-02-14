@@ -24,6 +24,10 @@ description: `I am an upcoming M.S./Ph.D. student in Computer Science (Artificia
   // 最新消息
   news: [
     {
+date: "Feb. 2026",
+content: `Nominated as reviewer for 3 ICLR workshops. Also, I am currently collaborating on new research with Prof. Hansen Huang at Academia Sinica and Prof. Claire Cardie’s group at Cornell University on evaluating multi-agent systems! Stay tuned for more updates!`
+    },
+    {
       date: "Oct. 2025",
 content: `Awarded the <a href="http://www.ta-yung.com.tw/" target="_blank" rel="noopener noreferrer">
 <strong>National Lin Hsiung Chen Foundation Scholarship</strong>
@@ -63,6 +67,13 @@ content: `Awarded the <a href="http://www.ta-yung.com.tw/" target="_blank" rel="
 
   // 工作與研究經驗
   experience: [
+    {
+      title: "Research Collaborator",
+      company: "Language and Knowledge Technologies Lab,Academia Sinica and Cornell University",
+      period: "Jan. 2026 – Present",
+      description: `Working with Prof. Hansen Huang at Academia Sinica and Prof. Claire Cardie's group  at Cornell University on developing a novel framework for evaluating multi-agent systems.`,
+      image: "/assets/img/academia sinica.jpg",
+    },
     {
       title: "Research Assistant",
       company: "Graph Lab, Stony Brook University",
@@ -167,7 +178,10 @@ Developed <strong>DeRAG</strong>, a novel black-box attack leveraging Differenti
     "2nd Place – AWS Generative AI Applications Hackathon 2024",
     "3rd Place – Meichu Hackathon - Kronos Research 2022",
     "Top 3 – ACT Influential Plan Business Technology Application Competition 2022",
-    "Reviewer – Efficient Reasoning Workshop, NeurIPS 2025"
+    "Reviewer – Efficient Reasoning Workshop, NeurIPS 2025",
+    "Reviewer – Agentic AI in the Wild: From Hallucinations to Reliable Autonomy Workshop, ICLR 2026",
+    "Reviewer – Workshop on Logical Reasoning of Large Language Models, ICLR 2026",
+    "Reviewer – Workshop on Latent & Implicit Thinking – Going Beyond CoT Reasoning, ICLR 2026"
   ],
 
   // 出版物
