@@ -1,0 +1,50 @@
+# ==========================================
+# startbootstrap-resume-gh-pages 專用 .gitignore
+# ==========================================
+
+# 1) 套件安裝目錄
+node_modules/
+
+# 2) Webpack 產物（中繼資料夾）
+# 此專案會把 dist/* 複製到根目錄部署到 GitHub Pages，
+# 所以 dist 本身不需要進版控。
+dist/
+
+# 3) 日誌與本機除錯檔
+debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 4) 環境變數
+.env
+.env.*
+!.env.example
+
+# 5) 快取檔
+.cache/
+.parcel-cache/
+.eslintcache
+
+# 6) IDE / 作業系統雜項
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# 7) Office 暫存檔（避免誤推）
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# 8) 履歷輸出檔（根目錄）
+/*.pdf
+/*.doc
+/*.docx
+
+# 注意：
+# - 根目錄的 bundle.js / bundle.js.LICENSE.txt / index.html
+#   是 GitHub Pages 實際部署檔，這裡「不忽略」。
