@@ -5,6 +5,7 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import Skills from './components/Skills';
 import Publications from './components/Publications';
+import ReviewerService from './components/ReviewerService';
 import Awards from './components/Awards';
 import Leadership from './components/Leadership';
 import Interests from './components/Interests';
@@ -107,6 +108,9 @@ const App = () => {
         <hr className="m-0" />
         
         <Publications publications={resumeData.publications} />
+        <hr className="m-0" />
+
+        <ReviewerService reviewerService={resumeData.reviewerService} />
         <hr className="m-0" />
         
         <Awards awards={resumeData.awards} />

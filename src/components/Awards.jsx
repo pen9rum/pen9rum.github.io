@@ -20,8 +20,7 @@ const Awards = ({ awards }) => {
   // 分類獎項
   const academicAwards  = [
     awards[0], // Deliman AI Scholarship
-    awards[1], // College Student Research Grant
-    awards[7]  // Reviewer – Efficient Reasoning Workshop
+    awards[1]  // College Student Research Grant
   ];
 
   const competitionAwards = [

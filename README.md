@@ -24,17 +24,22 @@ Open: http://localhost:8080
 
 #### Deployment Steps (Run every time you update content)
 ```powershell
-npm run build
-Copy-Item -Recurse -Force dist\* .
-git add .
-git commit -m "update"
-git push
+npm run deploy -- -Message "update resume"
 ```
 
 **Explanation**
-- `npm run build` generates production files in `dist/`
-- Contents of `dist/` are copied to the repository root
+- `npm run deploy` runs `scripts/deploy.ps1`
+- The script builds production files into `dist/`
+- It copies `dist/` contents to the repository root
+- It commits the changes and pushes to GitHub
 - GitHub Pages automatically rebuilds and deploys the site
+
+Useful options:
+```powershell
+npm run deploy -- -Message "update reviewer service"
+npm run deploy -- -NoPush
+npm run deploy -- -NoCommit
+```
 
 ---
 

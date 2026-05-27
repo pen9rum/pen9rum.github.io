@@ -97,7 +97,7 @@ Developed a stochastic MCTS-based Go Variant using Deep Reinforcement Learning. 
       period: "July 2024 – Present",
       description: `Advisor: Prof. Fang Yu.<br>
 Developed <strong>DeRAG</strong>, a novel black-box attack leveraging Differential Evolution for adversarial prompt optimization in RAG systems. Achieved state-of-the-art attack success (<strong>100%@Top-10</strong> on MS MARCO, <strong>>70%@Top-20</strong> on SciFact).`,
-      image: "https://upload.wikimedia.org/wikipedia/zh/thumb/3/33/National_Chengchi_University_logo.svg/1200px-National_Chengchi_University_logo.svg.png",
+      image: "https://upload.wikimedia.org/wikipedia/zh/3/33/National_Chengchi_University_logo.svg",
     },
     {
       title: "Research Assistant",
@@ -140,7 +140,7 @@ Developed <strong>DeRAG</strong>, a novel black-box attack leveraging Differenti
       field: "Double Major in Bachelor of Science in Artificial Intelligence Applications",
       period: "Sept. 2022 – Present",
       gpa: "3.92/4.0 (CS courses GPA: 4.0)",
-      image: "https://upload.wikimedia.org/wikipedia/zh/thumb/3/33/National_Chengchi_University_logo.svg/1200px-National_Chengchi_University_logo.svg.png"
+      image: "https://upload.wikimedia.org/wikipedia/zh/3/33/National_Chengchi_University_logo.svg"
     }
   ],
 
@@ -185,6 +185,34 @@ Developed <strong>DeRAG</strong>, a novel black-box attack leveraging Differenti
   ],
 
   // 出版物
+  reviewerService: [
+    {
+      title: "The First Workshop on Efficient Reasoning",
+      conference: "NeurIPS 2025",
+      website: "https://efficient-reasoning.github.io/",
+      conferencePage: "https://neurips.cc/virtual/2025/workshop/109556"
+    },
+    {
+      title: "Workshop on Logical Reasoning of Large Language Models",
+      conference: "ICLR 2026",
+      website: "https://sites.google.com/view/iclr-2026-llmreasoning",
+      conferencePage: "https://iclr.cc/virtual/2026/workshop/10000797",
+      outstanding: true
+    },
+    {
+      title: "Latent & Implicit Thinking - Going Beyond CoT Reasoning",
+      conference: "ICLR 2026",
+      website: "https://latent-implicit-thinking.github.io/",
+      conferencePage: "https://iclr.cc/virtual/2026/workshop/10000773"
+    },
+    {
+      title: "Agentic AI in the Wild: From Hallucinations to Reliable Autonomy",
+      conference: "ICLR 2026",
+      website: "https://hallucination-reliable-agentic-ai.github.io/",
+      conferencePage: "https://iclr.cc/virtual/2026/workshop/10000810"
+    }
+  ],
+
   publications: [
     {
       title: "Gradient-Free Adversarial Prompt Optimization for RAG Systems via Differential Evolution",
@@ -260,6 +288,7 @@ Developed <strong>DeRAG</strong>, a novel black-box attack leveraging Differenti
     { name: "Experience", href: "#experience" },
     { name: "Education", href: "#education" },
     { name: "Publications", href: "#publications" },
+    { name: "Reviewer Service", href: "#reviewer-service" },
     { name: "Awards", href: "#awards" },
     { name: "Leadership", href: "#leadership" },
   ]

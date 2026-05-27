@@ -40,9 +40,11 @@ const EducationCard = ({ education }) => {
 
   const imageStyle = {
     width: '100%',
-    height: 'auto',
-    objectFit: 'cover',
-    border: '1px solid #dee2e6'
+    height: '140px',
+    objectFit: 'contain',
+    border: '1px solid #dee2e6',
+    padding: '0.75rem',
+    backgroundColor: '#fff'
   };
 
   return (
