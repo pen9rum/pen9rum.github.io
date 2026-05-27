@@ -15,11 +15,6 @@ const PublicationCard = ({ publication }) => {
     lineHeight: 1.4
   };
 
-  const authorStyle = {
-    fontSize: '0.75rem',
-    letterSpacing: '0.02em'
-  };
-
   const venueStyle = {
     fontSize: '0.9rem',
     fontStyle: 'italic'
@@ -63,12 +58,6 @@ const PublicationCard = ({ publication }) => {
 
         <div className="col-md-9 col-sm-8">
           <h5 className="mb-2" style={titleStyle}>{publication.title}</h5>
-
-          {publication.authorRole && (
-            <span className="badge bg-primary mb-2" style={authorStyle}>
-              {publication.authorRole}
-            </span>
-          )}
 
           <p className="mb-2" style={venueStyle}>
             In <span className="text-primary">{publication.venue}</span>

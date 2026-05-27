@@ -211,7 +211,7 @@ Developed <strong>DeRAG</strong>, a novel black-box attack leveraging Differenti
     {
       title: "MedAction: Towards Active Multi-turn Clinical Diagnostic LLMs",
       authors: "Hsu, H. L., Wang, Z., Zhang, D., Chen, N. C., Wang, J., Ding, J. E., Hsu, C. H., Wang, G., et al.",
-      authorRole: "CO AUTHOR",
+      category: "LLM Reasoning & Agents",
       venue: "arXiv preprint arXiv:2605.07305",
       status: "Preprint",
       image: "/assets/img/medaction.svg",
@@ -222,7 +222,7 @@ Developed <strong>DeRAG</strong>, a novel black-box attack leveraging Differenti
     {
       title: "DeRAG: Black-box Adversarial Attacks on Retrieval-Augmented Generation Applications via Prompt Injection",
       authors: "Wang, J., and Yu, F.",
-      authorRole: "1ST AUTHOR",
+      category: "Security & Interpretability",
       venue: "KDD 2025 (Workshop on Prompt Optimization)",
       status: "Accepted",
       image: "/assets/img/kdd_2025.jpg",
@@ -235,7 +235,7 @@ Developed <strong>DeRAG</strong>, a novel black-box attack leveraging Differenti
     {
       title: "Social Temperature: Real-Time Social Activity Monitoring Based on Deep Learning Methods",
       authors: "Kuan-wu Chu, Joanna Qiong-yue Chen, Jerry Wang, et al.",
-      authorRole: "3RD AUTHOR",
+      category: "Multimodal",
       venue: "2024 International Computer Symposium, IEEE",
       status: "Accepted",
       image: "/assets/img/IEEE.jpg",
@@ -246,7 +246,7 @@ Developed <strong>DeRAG</strong>, a novel black-box attack leveraging Differenti
     {
       title: "Observer, Not Player: Simulating Theory of Mind in Large Language Models through Game Observation",
       authors: "Wang, J., and Liu, T. Y.",
-      authorRole: "1ST AUTHOR",
+      category: "LLM Reasoning & Agents",
       venue: "NeurIPS 2025 Workshop on LAW and FORLM (dual acceptance)",
       status: "Accepted",
       image: "/assets/img/Neurips2025.jpg",
@@ -257,7 +257,7 @@ Developed <strong>DeRAG</strong>, a novel black-box attack leveraging Differenti
     {
       title: "BEARing the Game: Basketball Event Analysis with Recurrent Networks",
       authors: "Yao, Y.C and Wang, J.",
-      authorRole: "2ND AUTHOR",
+      category: "AI Algorithms in Real-World Applications",
       venue: "TANet 2025",
       status: "Accepted",
       image: "/assets/img/basketball-analysis.svg",
