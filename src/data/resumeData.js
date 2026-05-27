@@ -55,12 +55,6 @@ content: `Awarded the <a href="http://www.ta-yung.com.tw/" target="_blank" rel="
       is accepted at 
       <a href="https://kdd-prompt-optimization-workshop.github.io/kdd-2025-prompt-optimization/" target="_blank" rel="noopener noreferrer">
       KDD 2025 Workshop on Prompt Optimization</a>!`
-    },
-    {
-      date: "Sep. 2024",
-      content: `Our paper <strong>Social Temperature</strong> is accepted at 
-      <a href="https://tanet2024.conf.nycu.edu.tw/agenda" target="_blank" rel="noopener noreferrer">
-      IEEE ICS 2024 (International Computer Symposium)</a>!`
     }
   ],
 
@@ -215,20 +209,20 @@ Developed <strong>DeRAG</strong>, a novel black-box attack leveraging Differenti
 
   publications: [
     {
-      title: "Gradient-Free Adversarial Prompt Optimization for RAG Systems via Differential Evolution",
-      authors: "Wang, J., and Yu, F.",
-      venue: "Under review at KDD 2026 (Research Track)",
-      status: "Under Review",
-      image: "/assets/img/kdd_2025.jpg",
-      // links: {
-      //   pdf: "#",
-      //   code: "#",
-      //   abstract: "#"
-      // }
+      title: "MedAction: Towards Active Multi-turn Clinical Diagnostic LLMs",
+      authors: "Hsu, H. L., Wang, Z., Zhang, D., Chen, N. C., Wang, J., Ding, J. E., Hsu, C. H., Wang, G., et al.",
+      authorRole: "CO AUTHOR",
+      venue: "arXiv preprint arXiv:2605.07305",
+      status: "Preprint",
+      image: "/assets/img/medaction.svg",
+      links: {
+        pdf: "https://arxiv.org/abs/2605.07305"
+      }
     },
     {
       title: "DeRAG: Black-box Adversarial Attacks on Retrieval-Augmented Generation Applications via Prompt Injection",
       authors: "Wang, J., and Yu, F.",
+      authorRole: "1ST AUTHOR",
       venue: "KDD 2025 (Workshop on Prompt Optimization)",
       status: "Accepted",
       image: "/assets/img/kdd_2025.jpg",
@@ -241,6 +235,7 @@ Developed <strong>DeRAG</strong>, a novel black-box attack leveraging Differenti
     {
       title: "Social Temperature: Real-Time Social Activity Monitoring Based on Deep Learning Methods",
       authors: "Kuan-wu Chu, Joanna Qiong-yue Chen, Jerry Wang, et al.",
+      authorRole: "3RD AUTHOR",
       venue: "2024 International Computer Symposium, IEEE",
       status: "Accepted",
       image: "/assets/img/IEEE.jpg",
@@ -251,6 +246,7 @@ Developed <strong>DeRAG</strong>, a novel black-box attack leveraging Differenti
     {
       title: "Observer, Not Player: Simulating Theory of Mind in Large Language Models through Game Observation",
       authors: "Wang, J., and Liu, T. Y.",
+      authorRole: "1ST AUTHOR",
       venue: "NeurIPS 2025 Workshop on LAW and FORLM (dual acceptance)",
       status: "Accepted",
       image: "/assets/img/Neurips2025.jpg",
@@ -261,9 +257,10 @@ Developed <strong>DeRAG</strong>, a novel black-box attack leveraging Differenti
     {
       title: "BEARing the Game: Basketball Event Analysis with Recurrent Networks",
       authors: "Yao, Y.C and Wang, J.",
+      authorRole: "2ND AUTHOR",
       venue: "TANet 2025",
       status: "Accepted",
-      image: "/assets/img/TANET2025.jpg",
+      image: "/assets/img/basketball-analysis.svg",
       links: {
         pdf: "https://arxiv.org/abs/2509.25858",
       }

@@ -7,7 +7,9 @@
     "start": "webpack serve --mode development --open",
     "build": "webpack --mode production",
     "dev": "webpack serve --mode development",
-    "deploy": "powershell -ExecutionPolicy Bypass -File scripts/deploy.ps1"
+    "deploy": "powershell -ExecutionPolicy Bypass -File scripts/deploy.ps1",
+    "deploy:dry": "powershell -ExecutionPolicy Bypass -File scripts/deploy.ps1 -NoCommit -NoPush",
+    "deploy:nopush": "powershell -ExecutionPolicy Bypass -File scripts/deploy.ps1 -NoPush"
   },
   "dependencies": {
     "react": "^18.2.0",

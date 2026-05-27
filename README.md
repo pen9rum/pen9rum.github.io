@@ -24,7 +24,7 @@ Open: http://localhost:8080
 
 #### Deployment Steps (Run every time you update content)
 ```powershell
-npm run deploy -- -Message "update resume"
+npm run deploy
 ```
 
 **Explanation**
@@ -36,9 +36,12 @@ npm run deploy -- -Message "update resume"
 
 Useful options:
 ```powershell
-npm run deploy -- -Message "update reviewer service"
-npm run deploy -- -NoPush
-npm run deploy -- -NoCommit
+npm run deploy --message="update reviewer service"
+npm run deploy:nopush
+npm run deploy:dry
+
+# Direct PowerShell options also work:
+powershell -ExecutionPolicy Bypass -File scripts/deploy.ps1 -Message "update resume" -NoPush
 ```
 
 ---

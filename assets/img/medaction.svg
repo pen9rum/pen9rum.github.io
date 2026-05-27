@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">MedAction clinical diagnostic agent illustration</title>
+  <desc id="desc">A medical cross, dialogue bubbles, and connected agent nodes for a clinical diagnostic LLM paper.</desc>
+  <rect width="640" height="420" rx="24" fill="#f8fbff"/>
+  <rect x="36" y="36" width="568" height="348" rx="24" fill="#ffffff" stroke="#d9e5f2" stroke-width="3"/>
+  <circle cx="174" cy="174" r="82" fill="#e8f4ff"/>
+  <rect x="148" y="112" width="52" height="124" rx="12" fill="#dc3545"/>
+  <rect x="112" y="148" width="124" height="52" rx="12" fill="#dc3545"/>
+  <path d="M298 126h188c28 0 50 22 50 50s-22 50-50 50h-96l-48 42v-42h-44c-28 0-50-22-50-50s22-50 50-50z" fill="#eef7f1" stroke="#77b892" stroke-width="3"/>
+  <circle cx="326" cy="176" r="10" fill="#198754"/>
+  <circle cx="388" cy="176" r="10" fill="#198754"/>
+  <circle cx="450" cy="176" r="10" fill="#198754"/>
+  <path d="M168 278c62 42 135 62 222 44" fill="none" stroke="#0d6efd" stroke-width="8" stroke-linecap="round"/>
+  <path d="M386 301l44 14-36 28" fill="none" stroke="#0d6efd" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="474" cy="300" r="34" fill="#fff5f5" stroke="#dc3545" stroke-width="4"/>
+  <path d="M474 282v36M456 300h36" stroke="#dc3545" stroke-width="8" stroke-linecap="round"/>
+  <text x="72" y="342" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">MedAction</text>
+  <text x="72" y="370" fill="#607080" font-family="Arial, Helvetica, sans-serif" font-size="18">Active Multi-turn Clinical Diagnostic LLMs</text>
+</svg>

@@ -9,6 +9,18 @@ $ErrorActionPreference = "Stop"
 $repoRoot = Resolve-Path (Join-Path $PSScriptRoot "..")
 Set-Location $repoRoot
 
+if ($env:npm_config_message) {
+  $Message = $env:npm_config_message
+}
+
+if ($env:npm_config_nocommit -or $env:npm_config_no_commit) {
+  $NoCommit = $true
+}
+
+if ($env:npm_config_nopush -or $env:npm_config_no_push) {
+  $NoPush = $true
+}
+
 function Run-Step {
   param(
     [string]$Title,

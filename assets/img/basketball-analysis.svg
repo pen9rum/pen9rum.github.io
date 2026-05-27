@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Basketball event analysis illustration</title>
+  <desc id="desc">A basketball court, ball trajectory, and analytics chart for a basketball event analysis paper.</desc>
+  <rect width="640" height="420" rx="24" fill="#f7fbff"/>
+  <rect x="38" y="38" width="564" height="344" rx="24" fill="#ffffff" stroke="#dce6f1" stroke-width="3"/>
+  <rect x="76" y="86" width="312" height="218" rx="14" fill="#eef6ff" stroke="#0d6efd" stroke-width="4"/>
+  <line x1="232" y1="86" x2="232" y2="304" stroke="#8dbcf5" stroke-width="3"/>
+  <circle cx="232" cy="195" r="56" fill="none" stroke="#8dbcf5" stroke-width="3"/>
+  <path d="M76 144h72v102H76" fill="none" stroke="#8dbcf5" stroke-width="3"/>
+  <path d="M388 144h-72v102h72" fill="none" stroke="#8dbcf5" stroke-width="3"/>
+  <circle cx="160" cy="205" r="34" fill="#f28c28" stroke="#9b4d12" stroke-width="4"/>
+  <path d="M126 205h68M160 171c18 18 18 50 0 68M160 171c-18 18-18 50 0 68" stroke="#9b4d12" stroke-width="3" fill="none"/>
+  <path d="M190 181c54-54 116-76 190-66" stroke="#dc3545" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="14 14"/>
+  <path d="M374 96l38 25-43 15" fill="none" stroke="#dc3545" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="432" y="118" width="116" height="166" rx="14" fill="#f8f9fa" stroke="#ced4da" stroke-width="3"/>
+  <rect x="456" y="230" width="18" height="30" rx="4" fill="#198754"/>
+  <rect x="486" y="196" width="18" height="64" rx="4" fill="#0d6efd"/>
+  <rect x="516" y="160" width="18" height="100" rx="4" fill="#dc3545"/>
+  <text x="84" y="346" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700">Basketball Event Analysis</text>
+  <text x="84" y="374" fill="#607080" font-family="Arial, Helvetica, sans-serif" font-size="18">Recurrent networks for performance trend prediction</text>
+</svg>

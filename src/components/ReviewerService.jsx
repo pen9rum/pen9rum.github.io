@@ -56,7 +56,7 @@ const ReviewerService = ({ reviewerService }) => {
                     {service.title}
                     {service.outstanding && (
                       <span className="badge bg-danger ms-2 align-middle">
-                        Outstanding
+                        Outstanding Reviewer
                       </span>
                     )}
                   </h5>

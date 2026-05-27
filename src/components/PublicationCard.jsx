@@ -16,8 +16,8 @@ const PublicationCard = ({ publication }) => {
   };
 
   const authorStyle = {
-    fontSize: '0.95rem',
-    color: '#6c757d'
+    fontSize: '0.75rem',
+    letterSpacing: '0.02em'
   };
 
   const venueStyle = {
@@ -31,9 +31,11 @@ const PublicationCard = ({ publication }) => {
 
   const imageStyle = {
     width: '100%',
-    height: 'auto',
-    objectFit: 'cover',
-    border: '1px solid #dee2e6'
+    height: '150px',
+    objectFit: 'contain',
+    border: '1px solid #dee2e6',
+    padding: '0.75rem',
+    backgroundColor: '#fff'
   };
 
   return (
@@ -62,7 +64,11 @@ const PublicationCard = ({ publication }) => {
         <div className="col-md-9 col-sm-8">
           <h5 className="mb-2" style={titleStyle}>{publication.title}</h5>
 
-          <p className="mb-1" style={authorStyle}>{publication.authors}</p>
+          {publication.authorRole && (
+            <span className="badge bg-primary mb-2" style={authorStyle}>
+              {publication.authorRole}
+            </span>
+          )}
 
           <p className="mb-2" style={venueStyle}>
             In <span className="text-primary">{publication.venue}</span>
@@ -71,7 +77,11 @@ const PublicationCard = ({ publication }) => {
           {publication.status && (
             <span
               className={`badge ${
-                publication.status === 'Accepted' ? 'bg-success' : 'bg-warning'
+                publication.status === 'Accepted'
+                  ? 'bg-success'
+                  : publication.status === 'Preprint'
+                    ? 'bg-info text-dark'
+                    : 'bg-warning'
               } mb-2`}
               style={badgeStyle}
             >
